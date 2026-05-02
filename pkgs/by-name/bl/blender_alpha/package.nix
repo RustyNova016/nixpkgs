@@ -123,7 +123,7 @@ stdenv'.mkDerivation (finalAttrs: {
   src = fetchzip {
     name = "source";
     url = "https://cdn.builder.blender.org/download/daily/archive/blender-5.2.0-alpha+main.f42bba01c1df-linux.x86_64-release.tar.xz";
-    hash = "1l5v5qv0y1w97jrd9agx3niskfsfn28mpqzr3j9l0r4gvb90m0gn";
+    hash = "sha256-9oEK0tqPZECTHPnjW5GwTrupox39qdSyPIkHDzYuu9A=";
   };
 
   patches = [
