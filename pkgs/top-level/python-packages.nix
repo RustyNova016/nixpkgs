@@ -83,7 +83,21 @@ self: super: with self; {
 
   adb-shell = callPackage ../development/python-modules/adb-shell { };
 
+  adbc-driver-bigquery = callPackage ../development/python-modules/adbc-driver-bigquery { };
+
+  adbc-driver-flightsql = callPackage ../development/python-modules/adbc-driver-flightsql { };
+
+  adbc-driver-manager = callPackage ../development/python-modules/adbc-driver-manager { };
+
+  adbc-driver-postgresql = callPackage ../development/python-modules/adbc-driver-postgresql { };
+
+  adbc-driver-snowflake = callPackage ../development/python-modules/adbc-driver-snowflake { };
+
+  adbc-driver-sqlite = callPackage ../development/python-modules/adbc-driver-sqlite { };
+
   adblock = callPackage ../development/python-modules/adblock { };
+
+  adbutils = callPackage ../development/python-modules/adbutils { };
 
   add-trailing-comma = callPackage ../development/python-modules/add-trailing-comma { };
 
@@ -105,8 +119,6 @@ self: super: with self; {
   adlfs = callPackage ../development/python-modules/adlfs { };
 
   advantage-air = callPackage ../development/python-modules/advantage-air { };
-
-  advocate = callPackage ../development/python-modules/advocate { };
 
   aeidon = callPackage ../development/python-modules/aeidon { };
 
@@ -578,6 +590,8 @@ self: super: with self; {
 
   aiovban = callPackage ../development/python-modules/aiovban { };
 
+  aiovban-pyaudio = callPackage ../development/python-modules/aiovban-pyaudio { };
+
   aiovlc = callPackage ../development/python-modules/aiovlc { };
 
   aiovodafone = callPackage ../development/python-modules/aiovodafone { };
@@ -654,43 +668,342 @@ self: super: with self; {
 
   algebraic-data-types = callPackage ../development/python-modules/algebraic-data-types { };
 
+  alibabacloud-actiontrail20200706 =
+    callPackage ../development/python-modules/alibabacloud-actiontrail20200706
+      { };
+
   alibabacloud-credentials = callPackage ../development/python-modules/alibabacloud-credentials { };
 
   alibabacloud-credentials-api =
     callPackage ../development/python-modules/alibabacloud-credentials-api
       { };
 
+  alibabacloud-cs20151215 = callPackage ../development/python-modules/alibabacloud-cs20151215 { };
+
+  alibabacloud-darabonba-array =
+    callPackage ../development/python-modules/alibabacloud-darabonba-array
+      { };
+
+  alibabacloud-darabonba-encode-util =
+    callPackage ../development/python-modules/alibabacloud-darabonba-encode-util
+      { };
+
+  alibabacloud-darabonba-map =
+    callPackage ../development/python-modules/alibabacloud-darabonba-map
+      { };
+
+  alibabacloud-darabonba-signature-util =
+    callPackage ../development/python-modules/alibabacloud-darabonba-signature-util
+      { };
+
+  alibabacloud-darabonba-string =
+    callPackage ../development/python-modules/alibabacloud-darabonba-string
+      { };
+
+  alibabacloud-darabonba-time =
+    callPackage ../development/python-modules/alibabacloud-darabonba-time
+      { };
+
+  alibabacloud-ecs20140526 = callPackage ../development/python-modules/alibabacloud-ecs20140526 { };
+
   alibabacloud-endpoint-util =
     callPackage ../development/python-modules/alibabacloud-endpoint-util
+      { };
+
+  alibabacloud-gateway-oss = callPackage ../development/python-modules/alibabacloud-gateway-oss { };
+
+  alibabacloud-gateway-oss-util =
+    callPackage ../development/python-modules/alibabacloud-gateway-oss-util
+      { };
+
+  alibabacloud-gateway-sls = callPackage ../development/python-modules/alibabacloud-gateway-sls { };
+
+  alibabacloud-gateway-sls-util =
+    callPackage ../development/python-modules/alibabacloud-gateway-sls-util
       { };
 
   alibabacloud-gateway-spi = callPackage ../development/python-modules/alibabacloud-gateway-spi { };
 
   alibabacloud-openapi-util = callPackage ../development/python-modules/alibabacloud-openapi-util { };
 
+  alibabacloud-oss-util = callPackage ../development/python-modules/alibabacloud-oss-util { };
+
+  alibabacloud-oss20190517 = callPackage ../development/python-modules/alibabacloud-oss20190517 { };
+
+  alibabacloud-ram20150501 = callPackage ../development/python-modules/alibabacloud-ram20150501 { };
+
+  alibabacloud-rds20140815 = callPackage ../development/python-modules/alibabacloud-rds20140815 { };
+
+  alibabacloud-sas20181203 = callPackage ../development/python-modules/alibabacloud-sas20181203 { };
+
+  alibabacloud-sls20201230 = callPackage ../development/python-modules/alibabacloud-sls20201230 { };
+
+  alibabacloud-sts20150401 = callPackage ../development/python-modules/alibabacloud-sts20150401 { };
+
   alibabacloud-tea = callPackage ../development/python-modules/alibabacloud-tea { };
 
+  alibabacloud-tea-openapi = callPackage ../development/python-modules/alibabacloud-tea-openapi { };
+
   alibabacloud-tea-util = callPackage ../development/python-modules/alibabacloud-tea-util { };
+
+  alibabacloud-tea-xml = callPackage ../development/python-modules/alibabacloud-tea-xml { };
+
+  alibabacloud-vpc20160428 = callPackage ../development/python-modules/alibabacloud-vpc20160428 { };
 
   aligator = callPackage ../development/python-modules/aligator { inherit (pkgs) aligator; };
 
   alive-progress = callPackage ../development/python-modules/alive-progress { };
 
-  aliyun-python-sdk-alimt = callPackage ../development/python-modules/aliyun-python-sdk-alimt { };
+  aliyun-log-fastpb = callPackage ../development/python-modules/aliyun-log-fastpb { };
 
-  aliyun-python-sdk-cdn = callPackage ../development/python-modules/aliyun-python-sdk-cdn { };
-
-  aliyun-python-sdk-config = callPackage ../development/python-modules/aliyun-python-sdk-config { };
+  inherit (callPackage ../development/python-modules/aliyun-python-sdk { })
+    aliyun-python-sdk-actiontrail
+    aliyun-python-sdk-adb
+    aliyun-python-sdk-adcp
+    aliyun-python-sdk-address-purification
+    aliyun-python-sdk-aicontent
+    aliyun-python-sdk-aigen
+    aliyun-python-sdk-aimath
+    aliyun-python-sdk-aimiaobi
+    aliyun-python-sdk-aipodcast
+    aliyun-python-sdk-airec
+    aliyun-python-sdk-airticketopen
+    aliyun-python-sdk-alb
+    aliyun-python-sdk-alidns
+    aliyun-python-sdk-alikafka
+    aliyun-python-sdk-alimt
+    aliyun-python-sdk-alinlp
+    aliyun-python-sdk-amqp-open
+    aliyun-python-sdk-antiddos-public
+    aliyun-python-sdk-anytrans
+    aliyun-python-sdk-apds
+    aliyun-python-sdk-appstream-center
+    aliyun-python-sdk-aps
+    aliyun-python-sdk-arms
+    aliyun-python-sdk-avatar
+    aliyun-python-sdk-bailianchatbot
+    aliyun-python-sdk-beian
+    aliyun-python-sdk-bpstudio
+    aliyun-python-sdk-brain-industrial
+    aliyun-python-sdk-brinekingdom
+    aliyun-python-sdk-bssopenapi
+    aliyun-python-sdk-btripopen
+    aliyun-python-sdk-buss
+    aliyun-python-sdk-cams
+    aliyun-python-sdk-captcha
+    aliyun-python-sdk-cassandra
+    aliyun-python-sdk-cbn
+    aliyun-python-sdk-cc5g
+    aliyun-python-sdk-ccc
+    aliyun-python-sdk-cciotgw
+    aliyun-python-sdk-cdn
+    aliyun-python-sdk-cdrs
+    aliyun-python-sdk-ciomarketpop
+    aliyun-python-sdk-clickhouse
+    aliyun-python-sdk-cloudapi
+    aliyun-python-sdk-cloudauth
+    aliyun-python-sdk-cloudauth-console
+    aliyun-python-sdk-cloudesl
+    aliyun-python-sdk-cloudphone
+    aliyun-python-sdk-cloud-siem
+    aliyun-python-sdk-cms
+    aliyun-python-sdk-codeup
+    aliyun-python-sdk-companyreg
+    aliyun-python-sdk-computenest
+    aliyun-python-sdk-computenestsupplier
+    aliyun-python-sdk-config
+    aliyun-python-sdk-csas
+    aliyun-python-sdk-das
+    aliyun-python-sdk-dashdeviceconsole
+    aliyun-python-sdk-dataphin-public
+    aliyun-python-sdk-dataworks-public
+    aliyun-python-sdk-dbfs
+    aliyun-python-sdk-dbs
+    aliyun-python-sdk-dcdn
+    aliyun-python-sdk-ddosbgp
+    aliyun-python-sdk-ddoscoo
+    aliyun-python-sdk-ddosdiversion
+    aliyun-python-sdk-dds
+    aliyun-python-sdk-devops-rdc
+    aliyun-python-sdk-dfs
+    aliyun-python-sdk-dg
+    aliyun-python-sdk-dms
+    aliyun-python-sdk-dms-dg
+    aliyun-python-sdk-dms-enterprise
+    aliyun-python-sdk-documentautoml
+    aliyun-python-sdk-domain
+    aliyun-python-sdk-drds
+    aliyun-python-sdk-dt-oc-info
+    aliyun-python-sdk-dts
+    aliyun-python-sdk-dybaseapi
+    aliyun-python-sdk-dyplsapi
+    aliyun-python-sdk-dypnsapi
+    aliyun-python-sdk-dypnsapi-intl
+    aliyun-python-sdk-dysmsapi
+    aliyun-python-sdk-dytnsapi
+    aliyun-python-sdk-dyvmsapi
+    aliyun-python-sdk-eais
+    aliyun-python-sdk-eas
+    aliyun-python-sdk-ebs
+    aliyun-python-sdk-ecd
+    aliyun-python-sdk-eci
+    aliyun-python-sdk-ecs
+    aliyun-python-sdk-ecs-workbench
+    aliyun-python-sdk-edas
+    aliyun-python-sdk-eds-user
+    aliyun-python-sdk-eduinterpreting
+    aliyun-python-sdk-eflo
+    aliyun-python-sdk-eflo-controller
+    aliyun-python-sdk-ehpc
+    aliyun-python-sdk-ehpcinstant
+    aliyun-python-sdk-eiam
+    aliyun-python-sdk-eipanycast
+    aliyun-python-sdk-elasticsearch
+    aliyun-python-sdk-emas-appmonitor
+    aliyun-python-sdk-emr
+    aliyun-python-sdk-emrstudio
+    aliyun-python-sdk-ens
+    aliyun-python-sdk-esa
+    aliyun-python-sdk-ess
+    aliyun-python-sdk-es-serverless
+    aliyun-python-sdk-et-industry-openapi
+    aliyun-python-sdk-eventbridge
+    aliyun-python-sdk-facebody
+    aliyun-python-sdk-fnf
+    aliyun-python-sdk-foas
+    aliyun-python-sdk-ft
+    aliyun-python-sdk-ga
+    aliyun-python-sdk-gdb
+    aliyun-python-sdk-geoip
+    aliyun-python-sdk-governance
+    aliyun-python-sdk-gpdb
+    aliyun-python-sdk-grace
+    aliyun-python-sdk-green
+    aliyun-python-sdk-gwlb
+    aliyun-python-sdk-hbase
+    aliyun-python-sdk-hbr
+    aliyun-python-sdk-hcs-mgw
+    aliyun-python-sdk-hitsdb
+    aliyun-python-sdk-ice
+    aliyun-python-sdk-idaas-doraemon
+    aliyun-python-sdk-imageaudit
+    aliyun-python-sdk-imageenhan
+    aliyun-python-sdk-imageprocess
+    aliyun-python-sdk-imagerecog
+    aliyun-python-sdk-imageseg
+    aliyun-python-sdk-imarketing
+    aliyun-python-sdk-imgsearch
+    aliyun-python-sdk-imm
+    aliyun-python-sdk-intlmarket
+    aliyun-python-sdk-iot
+    aliyun-python-sdk-iotcc
+    aliyun-python-sdk-iqs
+    aliyun-python-sdk-itag
+    aliyun-python-sdk-ivision
+    aliyun-python-sdk-kms
+    aliyun-python-sdk-lingmou
+    aliyun-python-sdk-linkvisual
+    aliyun-python-sdk-linkwan
+    aliyun-python-sdk-live
+    aliyun-python-sdk-ltl
+    aliyun-python-sdk-lto
+    aliyun-python-sdk-market
+    aliyun-python-sdk-marketplaceintl
+    aliyun-python-sdk-maxcompute
+    aliyun-python-sdk-mns-open
+    aliyun-python-sdk-moguan-sdk
+    aliyun-python-sdk-msccommonquery
+    aliyun-python-sdk-mse
+    aliyun-python-sdk-mseap
+    aliyun-python-sdk-mts
+    aliyun-python-sdk-nas
+    aliyun-python-sdk-nis
+    aliyun-python-sdk-nlb
+    aliyun-python-sdk-nlp-automl
+    aliyun-python-sdk-objectdet
+    aliyun-python-sdk-oceanbasepro
+    aliyun-python-sdk-ocr
+    aliyun-python-sdk-ocs
+    aliyun-python-sdk-oms
+    aliyun-python-sdk-ons
+    aliyun-python-sdk-onsmqtt
+    aliyun-python-sdk-oos
+    aliyun-python-sdk-openanalytics-open
+    aliyun-python-sdk-openitag
+    aliyun-python-sdk-opensearch
+    aliyun-python-sdk-osssddp
+    aliyun-python-sdk-outboundbot
+    aliyun-python-sdk-pai-dsw
+    aliyun-python-sdk-paielasticdatasetaccelerator
+    aliyun-python-sdk-paifeaturestore
+    aliyun-python-sdk-pairecservice
+    aliyun-python-sdk-polardb
+    aliyun-python-sdk-polardbx
+    aliyun-python-sdk-privatelink
+    aliyun-python-sdk-push
+    aliyun-python-sdk-pvtz
+    aliyun-python-sdk-qianzhou
+    aliyun-python-sdk-qualitycheck
+    aliyun-python-sdk-quickbi-public
+    aliyun-python-sdk-quotas
+    aliyun-python-sdk-ram
+    aliyun-python-sdk-rds
+    aliyun-python-sdk-rds-data
+    aliyun-python-sdk-reid-cloud
+    aliyun-python-sdk-resourcecenter
+    aliyun-python-sdk-resourcemanager
+    aliyun-python-sdk-resourcesharing
+    aliyun-python-sdk-retailcloud
+    aliyun-python-sdk-r-kvstore
+    aliyun-python-sdk-ros
+    aliyun-python-sdk-rsimganalys
+    aliyun-python-sdk-rtc
+    aliyun-python-sdk-sae
+    aliyun-python-sdk-safconsole
+    aliyun-python-sdk-sas
+    aliyun-python-sdk-sasti
+    aliyun-python-sdk-scdn
+    aliyun-python-sdk-schedulerx2
+    aliyun-python-sdk-schedulerx3
+    aliyun-python-sdk-scsp
+    aliyun-python-sdk-sddp
+    aliyun-python-sdk-selectdb
+    aliyun-python-sdk-sgw
+    aliyun-python-sdk-slb
+    aliyun-python-sdk-sls
+    aliyun-python-sdk-smartag
+    aliyun-python-sdk-smartsales
+    aliyun-python-sdk-smc
+    aliyun-python-sdk-snsuapi
+    aliyun-python-sdk-sophonsoar
+    aliyun-python-sdk-sts
+    aliyun-python-sdk-swas-open
+    aliyun-python-sdk-tag
+    aliyun-python-sdk-threedvision
+    aliyun-python-sdk-tingwu
+    aliyun-python-sdk-unimkt
+    aliyun-python-sdk-ververica
+    aliyun-python-sdk-viapi
+    aliyun-python-sdk-viapi-oxs-cross
+    aliyun-python-sdk-viapi-regen
+    aliyun-python-sdk-videoenhan
+    aliyun-python-sdk-videorecog
+    aliyun-python-sdk-videoseg
+    aliyun-python-sdk-vod
+    aliyun-python-sdk-voicenavigator
+    aliyun-python-sdk-vpc
+    aliyun-python-sdk-vpcpeer
+    aliyun-python-sdk-vs
+    aliyun-python-sdk-waf-openapi
+    aliyun-python-sdk-websitebuild
+    aliyun-python-sdk-wfts
+    aliyun-python-sdk-workbench-ide
+    aliyun-python-sdk-workorder
+    aliyun-python-sdk-wss
+    aliyun-python-sdk-xtrace
+    ;
 
   aliyun-python-sdk-core = callPackage ../development/python-modules/aliyun-python-sdk-core { };
-
-  aliyun-python-sdk-dbfs = callPackage ../development/python-modules/aliyun-python-sdk-dbfs { };
-
-  aliyun-python-sdk-iot = callPackage ../development/python-modules/aliyun-python-sdk-iot { };
-
-  aliyun-python-sdk-kms = callPackage ../development/python-modules/aliyun-python-sdk-kms { };
-
-  aliyun-python-sdk-sts = callPackage ../development/python-modules/aliyun-python-sdk-sts { };
 
   allantools = callPackage ../development/python-modules/allantools { };
 
@@ -709,6 +1022,8 @@ self: super: with self; {
   alpha-vantage = callPackage ../development/python-modules/alpha-vantage { };
 
   alphaessopenapi = callPackage ../development/python-modules/alphaessopenapi { };
+
+  alphashape = callPackage ../development/python-modules/alphashape { };
 
   altair = callPackage ../development/python-modules/altair { };
 
@@ -1964,6 +2279,8 @@ self: super: with self; {
 
   beartype = callPackage ../development/python-modules/beartype { };
 
+  beat-this = callPackage ../development/python-modules/beat-this { };
+
   beaupy = callPackage ../development/python-modules/beaupy { };
 
   beautiful-date = callPackage ../development/python-modules/beautiful-date { };
@@ -2143,6 +2460,10 @@ self: super: with self; {
   blackrenderer = callPackage ../development/python-modules/blackrenderer { };
 
   blake3 = callPackage ../development/python-modules/blake3 { };
+
+  blastdns = callPackage ../development/python-modules/blastdns { };
+
+  blasthttp = callPackage ../development/python-modules/blasthttp { };
 
   ble-serial = callPackage ../development/python-modules/ble-serial { };
 
@@ -2465,6 +2786,12 @@ self: super: with self; {
       inherit (self) python numpy boost;
     }
   );
+
+  caido-schema-proxy = callPackage ../development/python-modules/caido-schema-proxy { };
+
+  caido-sdk-client = callPackage ../development/python-modules/caido-sdk-client { };
+
+  caido-server-auth = callPackage ../development/python-modules/caido-server-auth { };
 
   caio = callPackage ../development/python-modules/caio { };
 
@@ -3322,6 +3649,8 @@ self: super: with self; {
 
   crate = callPackage ../development/python-modules/crate { };
 
+  crawl4ai = callPackage ../development/python-modules/crawl4ai { };
+
   crayons = callPackage ../development/python-modules/crayons { };
 
   crc = callPackage ../development/python-modules/crc { };
@@ -3506,6 +3835,8 @@ self: super: with self; {
 
   cybox = callPackage ../development/python-modules/cybox { };
 
+  cyclebane = callPackage ../development/python-modules/cyclebane { };
+
   cycler = callPackage ../development/python-modules/cycler { };
 
   cyclonedds-python = callPackage ../development/python-modules/cyclonedds-python { };
@@ -3576,6 +3907,8 @@ self: super: with self; {
   daphne = callPackage ../development/python-modules/daphne { };
 
   daqp = callPackage ../development/python-modules/daqp { };
+
+  darabonba-core = callPackage ../development/python-modules/darabonba-core { };
 
   darkdetect = callPackage ../development/python-modules/darkdetect { };
 
@@ -5421,6 +5754,8 @@ self: super: with self; {
     };
   };
 
+  fake-http-header = callPackage ../development/python-modules/fake-http-header { };
+
   fake-useragent = callPackage ../development/python-modules/fake-useragent { };
 
   faker = callPackage ../development/python-modules/faker { };
@@ -5514,6 +5849,8 @@ self: super: with self; {
   fastlite = callPackage ../development/python-modules/fastlite { };
 
   fastmcp = callPackage ../development/python-modules/fastmcp { };
+
+  fastmcp-slim = callPackage ../development/python-modules/fastmcp-slim { };
 
   fastmri = callPackage ../development/python-modules/fastmri { };
 
@@ -5655,6 +5992,8 @@ self: super: with self; {
   firedrake = callPackage ../development/python-modules/firedrake { };
 
   firedrake-fiat = callPackage ../development/python-modules/firedrake-fiat { };
+
+  firedrake-ufl = callPackage ../development/python-modules/firedrake-ufl { };
 
   fireflyalgorithm = callPackage ../development/python-modules/fireflyalgorithm { };
 
@@ -6713,7 +7052,7 @@ self: super: with self; {
     inherit (pkgs) libxc;
   };
 
-  gpgme = callPackage ../development/python-modules/gpgme { inherit (pkgs) gpgme; };
+  gpg = callPackage ../development/python-modules/gpg { inherit (pkgs) gpgme; };
 
   gphoto2 = callPackage ../development/python-modules/gphoto2 { };
 
@@ -6843,6 +7182,8 @@ self: super: with self; {
   gridnet = callPackage ../development/python-modules/gridnet { };
 
   griffe = callPackage ../development/python-modules/griffe { };
+
+  griffecli = callPackage ../development/python-modules/griffecli { };
 
   griffelib = callPackage ../development/python-modules/griffelib { };
 
@@ -7114,6 +7455,8 @@ self: super: with self; {
 
   hebg = callPackage ../development/python-modules/hebg { };
 
+  hebi-py = callPackage ../development/python-modules/hebi-py { };
+
   hegel-ip-client = callPackage ../development/python-modules/hegel-ip-client { };
 
   helion = callPackage ../development/python-modules/helion { };
@@ -7145,6 +7488,8 @@ self: super: with self; {
   hexbytes = callPackage ../development/python-modules/hexbytes { };
 
   hexdump = callPackage ../development/python-modules/hexdump { };
+
+  hf-gradio = callPackage ../development/python-modules/hf-gradio { };
 
   hf-transfer = callPackage ../development/python-modules/hf-transfer { };
 
@@ -7345,6 +7690,8 @@ self: super: with self; {
   httpie-ntlm = callPackage ../development/python-modules/httpie-ntlm { };
 
   httplib2 = callPackage ../development/python-modules/httplib2 { };
+
+  httplib2shim = callPackage ../development/python-modules/httplib2shim { };
 
   httpretty = callPackage ../development/python-modules/httpretty { };
 
@@ -9196,6 +9543,8 @@ self: super: with self; {
 
   linode-api = callPackage ../development/python-modules/linode-api { };
 
+  linode-api4 = callPackage ../development/python-modules/linode-api4 { };
+
   linode-metadata = callPackage ../development/python-modules/linode-metadata { };
 
   linuxdoc = callPackage ../development/python-modules/linuxdoc { };
@@ -9484,6 +9833,8 @@ self: super: with self; {
 
   logging-tree = callPackage ../development/python-modules/logging-tree { };
 
+  logic2-automation = callPackage ../development/python-modules/logic2-automation { };
+
   logical-unification = callPackage ../development/python-modules/logical-unification { };
 
   logilab-common = callPackage ../development/python-modules/logilab/common.nix {
@@ -9513,6 +9864,8 @@ self: super: with self; {
   lomond = callPackage ../development/python-modules/lomond { };
 
   london-tube-status = callPackage ../development/python-modules/london-tube-status { };
+
+  lookup-license = callPackage ../development/python-modules/lookup-license { };
 
   lookyloo-models = callPackage ../development/python-modules/lookyloo-models { };
 
@@ -10463,15 +10816,11 @@ self: super: with self; {
     callPackage ../development/python-modules/mozjpeg_lossless_optimization
       { };
 
-  mpd2 = callPackage ../development/python-modules/mpd2 { };
-
   mpegdash = callPackage ../development/python-modules/mpegdash { };
 
   mpi-pytest = callPackage ../development/python-modules/mpi-pytest { };
 
   mpi4py = callPackage ../development/python-modules/mpi4py { };
-
-  mpire = callPackage ../development/python-modules/mpire { };
 
   mpl-scatter-density = callPackage ../development/python-modules/mpl-scatter-density { };
 
@@ -10594,6 +10943,8 @@ self: super: with self; {
   mung = callPackage ../development/python-modules/mung { };
 
   munkres = callPackage ../development/python-modules/munkres { };
+
+  muon-optimizer = callPackage ../development/python-modules/muon-optimizer { };
 
   murmurhash = callPackage ../development/python-modules/murmurhash { };
 
@@ -11010,7 +11361,7 @@ self: super: with self; {
 
   mypyllant = callPackage ../development/python-modules/mypyllant { };
 
-  mysql-connector = callPackage ../development/python-modules/mysql-connector { };
+  mysql-connector-python = callPackage ../development/python-modules/mysql-connector-python { };
 
   mysqlclient = callPackage ../development/python-modules/mysqlclient { };
 
@@ -11042,7 +11393,10 @@ self: super: with self; {
 
   nampa = callPackage ../development/python-modules/nampa { };
 
-  nanoarrow = callPackage ../development/python-modules/nanoarrow { zstd-c = pkgs.zstd; };
+  nanoarrow = callPackage ../development/python-modules/nanoarrow {
+    zstd-c = pkgs.zstd;
+    nanoarrow-c = pkgs.nanoarrow;
+  };
 
   nanobind = callPackage ../development/python-modules/nanobind { };
 
@@ -11380,6 +11734,8 @@ self: super: with self; {
   nmapthon2 = callPackage ../development/python-modules/nmapthon2 { };
 
   nmcli = callPackage ../development/python-modules/nmcli { };
+
+  nnaudio = callPackage ../development/python-modules/nnaudio { };
 
   nnpdf = toPythonModule (pkgs.nnpdf.override { python3 = python; });
 
@@ -11747,6 +12103,7 @@ self: super: with self; {
       python3Packages = self;
       pythonSupport = true;
     };
+    inherit (pkgs) openvino;
   };
 
   onnxruntime-tools = callPackage ../development/python-modules/onnxruntime-tools { };
@@ -11873,6 +12230,22 @@ self: super: with self; {
       python3Packages = self;
     }
   );
+
+  openinference-instrumentation =
+    callPackage ../development/python-modules/openinference-instrumentation
+      { };
+
+  openinference-instrumentation-claude-agent-sdk =
+    callPackage ../development/python-modules/openinference-instrumentation-claude-agent-sdk
+      { };
+
+  openinference-instrumentation-openai =
+    callPackage ../development/python-modules/openinference-instrumentation-openai
+      { };
+
+  openinference-semantic-conventions =
+    callPackage ../development/python-modules/openinference-semantic-conventions
+      { };
 
   openmm = toPythonModule (
     pkgs.openmm.override {
@@ -12330,6 +12703,8 @@ self: super: with self; {
 
   pandas-datareader = callPackage ../development/python-modules/pandas-datareader { };
 
+  pandas-flavor = callPackage ../development/python-modules/pandas-flavor { };
+
   pandas-stubs = callPackage ../development/python-modules/pandas-stubs { };
 
   pandas-ta = callPackage ../development/python-modules/pandas-ta { };
@@ -12447,6 +12822,8 @@ self: super: with self; {
   patch-ng = callPackage ../development/python-modules/patch-ng { };
 
   patchpy = callPackage ../development/python-modules/patchpy { };
+
+  patchright = callPackage ../development/python-modules/patchright { };
 
   path = callPackage ../development/python-modules/path { };
 
@@ -12784,6 +13161,8 @@ self: super: with self; {
   pinecone-plugin-interface = callPackage ../development/python-modules/pinecone-plugin-interface { };
 
   ping3 = callPackage ../development/python-modules/ping3 { };
+
+  pingouin = callPackage ../development/python-modules/pingouin { };
 
   pinocchio = callPackage ../development/python-modules/pinocchio { inherit (pkgs) pinocchio; };
 
@@ -13940,6 +14319,8 @@ self: super: with self; {
 
   pydeconz = callPackage ../development/python-modules/pydeconz { };
 
+  pydeep2 = callPackage ../development/python-modules/pydeep2 { inherit (pkgs) ssdeep; };
+
   pydelijn = callPackage ../development/python-modules/pydelijn { };
 
   pydemumble = callPackage ../development/python-modules/pydemumble { };
@@ -14650,6 +15031,8 @@ self: super: with self; {
 
   pymilvus = callPackage ../development/python-modules/pymilvus { };
 
+  pymisp = callPackage ../development/python-modules/pymisp { };
+
   pymitsubishi = callPackage ../development/python-modules/pymitsubishi { };
 
   pymitv = callPackage ../development/python-modules/pymitv { };
@@ -15237,6 +15620,10 @@ self: super: with self; {
   pyrympro = callPackage ../development/python-modules/pyrympro { };
 
   pysabnzbd = callPackage ../development/python-modules/pysabnzbd { };
+
+  pysail = callPackage ../development/python-modules/pysail {
+    protoc = pkgs.protobuf;
+  };
 
   pysaj = callPackage ../development/python-modules/pysaj { };
 
@@ -16197,6 +16584,8 @@ self: super: with self; {
 
   python-motionmount = callPackage ../development/python-modules/python-motionmount { };
 
+  python-mpd2 = callPackage ../development/python-modules/python-mpd2 { };
+
   python-mpv-jsonipc = callPackage ../development/python-modules/python-mpv-jsonipc { };
 
   python-multipart = callPackage ../development/python-modules/python-multipart { };
@@ -16340,6 +16729,10 @@ self: super: with self; {
   python-stdnum = callPackage ../development/python-modules/python-stdnum { };
 
   python-string-utils = callPackage ../development/python-modules/python-string-utils { };
+
+  python-subunit = callPackage ../development/python-modules/python-subunit {
+    inherit (pkgs) subunit cppunit check;
+  };
 
   python-swiftclient = callPackage ../development/python-modules/python-swiftclient { };
 
@@ -17684,6 +18077,10 @@ self: super: with self; {
 
   scales = callPackage ../development/python-modules/scales { };
 
+  scaleway = callPackage ../development/python-modules/scaleway { };
+
+  scaleway-core = callPackage ../development/python-modules/scaleway-core { };
+
   scalib = callPackage ../development/python-modules/scalib { };
 
   scancode-toolkit = callPackage ../development/python-modules/scancode-toolkit { };
@@ -17758,6 +18155,8 @@ self: super: with self; {
 
   scikits-odes-sundials = callPackage ../development/python-modules/scikits-odes-sundials { };
 
+  sciline = callPackage ../development/python-modules/sciline { };
+
   scim2-client = callPackage ../development/python-modules/scim2-client { };
 
   scim2-filter-parser = callPackage ../development/python-modules/scim2-filter-parser { };
@@ -17769,6 +18168,10 @@ self: super: with self; {
   scim2-tester = callPackage ../development/python-modules/scim2-tester { };
 
   scipp = callPackage ../development/python-modules/scipp { };
+
+  scippneutron = callPackage ../development/python-modules/scippneutron { };
+
+  scippnexus = callPackage ../development/python-modules/scippnexus { };
 
   scipy = callPackage ../development/python-modules/scipy { };
 
@@ -17807,6 +18210,8 @@ self: super: with self; {
   scsgate = callPackage ../development/python-modules/scsgate { };
 
   scspell = callPackage ../development/python-modules/scspell { };
+
+  scverse-misc = callPackage ../development/python-modules/scverse-misc { };
 
   sdbus = callPackage ../development/python-modules/sdbus { };
 
@@ -18699,8 +19104,6 @@ self: super: with self; {
 
   sphinx-toolbox = callPackage ../development/python-modules/sphinx-toolbox { };
 
-  sphinx-versions = callPackage ../development/python-modules/sphinx-versions { };
-
   sphinxawesome-theme = callPackage ../development/python-modules/sphinxawesome-theme { };
 
   sphinxcontrib-actdiag = callPackage ../development/python-modules/sphinxcontrib-actdiag { };
@@ -18732,8 +19135,6 @@ self: super: with self; {
   sphinxcontrib-htmlhelp = callPackage ../development/python-modules/sphinxcontrib-htmlhelp { };
 
   sphinxcontrib-httpdomain = callPackage ../development/python-modules/sphinxcontrib-httpdomain { };
-
-  sphinxcontrib-images = callPackage ../development/python-modules/sphinxcontrib-images { };
 
   sphinxcontrib-jinjadomain = callPackage ../development/python-modules/sphinxcontrib-jinjadomain { };
 
@@ -18899,6 +19300,8 @@ self: super: with self; {
 
   sqlobject = callPackage ../development/python-modules/sqlobject { };
 
+  sqlparams = callPackage ../development/python-modules/sqlparams { };
+
   sqlparse = callPackage ../development/python-modules/sqlparse { };
 
   sqltrie = callPackage ../development/python-modules/sqltrie { };
@@ -18960,6 +19363,14 @@ self: super: with self; {
   stac-validator = callPackage ../development/python-modules/stac-validator { };
 
   stack-data = callPackage ../development/python-modules/stack-data { };
+
+  stackit-core = callPackage ../development/python-modules/stackit-core { };
+
+  stackit-iaas = callPackage ../development/python-modules/stackit-iaas { };
+
+  stackit-objectstorage = callPackage ../development/python-modules/stackit-objectstorage { };
+
+  stackit-resourcemanager = callPackage ../development/python-modules/stackit-resourcemanager { };
 
   stackprinter = callPackage ../development/python-modules/stackprinter { };
 
@@ -19203,10 +19614,6 @@ self: super: with self; {
   subprocess-tee = callPackage ../development/python-modules/subprocess-tee { };
 
   subprocess4 = callPackage ../development/python-modules/subprocess4 { };
-
-  subunit = callPackage ../development/python-modules/subunit {
-    inherit (pkgs) subunit cppunit check;
-  };
 
   subzerod = callPackage ../development/python-modules/subzerod { };
 
@@ -19741,6 +20148,8 @@ self: super: with self; {
 
   tf-keras = callPackage ../development/python-modules/tf-keras { };
 
+  tf-playwright-stealth = callPackage ../development/python-modules/tf-playwright-stealth { };
+
   tf2onnx = callPackage ../development/python-modules/tf2onnx { };
 
   tflearn = callPackage ../development/python-modules/tflearn { };
@@ -20046,8 +20455,6 @@ self: super: with self; {
 
   torchtnt = callPackage ../development/python-modules/torchtnt { };
 
-  torchtune = callPackage ../development/python-modules/torchtune { };
-
   torchvision = callPackage ../development/python-modules/torchvision { };
 
   torchvision-bin = callPackage ../development/python-modules/torchvision/bin.nix { };
@@ -20081,6 +20488,8 @@ self: super: with self; {
   traceback2 = callPackage ../development/python-modules/traceback2 { };
 
   tracerite = callPackage ../development/python-modules/tracerite { };
+
+  trackers = callPackage ../development/python-modules/trackers { };
 
   trackpy = callPackage ../development/python-modules/trackpy { };
 
@@ -20171,7 +20580,7 @@ self: super: with self; {
             "tree-sitter-sshclientconfig"
             "tree-sitter-templ"
           ])
-        ) pkgs.tree-sitter.builtGrammars
+        ) pkgs.tree-sitter-grammars.derivations
       )
   );
 
@@ -20287,6 +20696,8 @@ self: super: with self; {
   tstr = callPackage ../development/python-modules/tstr { };
 
   tt-flash = callPackage ../development/python-modules/tt-flash { };
+
+  tt-perf-report = callPackage ../development/python-modules/tt-perf-report { };
 
   tt-tools-common = callPackage ../development/python-modules/tt-tools-common { };
 
@@ -20991,6 +21402,8 @@ self: super: with self; {
 
   uncertainties = callPackage ../development/python-modules/uncertainties { };
 
+  unclecode-litellm = callPackage ../development/python-modules/unclecode-litellm { };
+
   uncompresspy = callPackage ../development/python-modules/uncompresspy { };
 
   uncompyle6 = callPackage ../development/python-modules/uncompyle6 { };
@@ -21208,6 +21621,8 @@ self: super: with self; {
   vacuum-map-parser-roborock =
     callPackage ../development/python-modules/vacuum-map-parser-roborock
       { };
+
+  valhallaapi = callPackage ../development/python-modules/valhallaapi { };
 
   validate-email = callPackage ../development/python-modules/validate-email { };
 

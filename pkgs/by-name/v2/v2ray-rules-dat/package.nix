@@ -5,7 +5,7 @@
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "v2ray-rules-dat";
-  version = "202606172318";
+  version = "202606302305";
 
   __structuredAttrs = true;
   strictDeps = true;
@@ -25,11 +25,11 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   passthru = {
     geoipDat = fetchurl {
       url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${finalAttrs.version}/geoip.dat";
-      hash = "sha256-iGGpeUaWtIH7AEPueCssQOgL/Ia7nkLFvWnAj1SDsbU=";
+      hash = "sha256-5VG2bpMAqY7MlKXcjIajlzv3AzE4sPph6wY4QZzlAFc=";
     };
     geositeDat = fetchurl {
       url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/${finalAttrs.version}/geosite.dat";
-      hash = "sha256-DEhEZP7ijNudb6qhIArpRhUqzEzmG0OxJaoBuMFVacM=";
+      hash = "sha256-xPj6SJ0FGqNzcw0oa91ymMHTySDBMsJ3Raq9pUHM3YU=";
     };
     updateScript = ./update.sh;
   };
